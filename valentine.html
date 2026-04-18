@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Putri Ummuhani</title>
+
+    <!-- Gabungkan CSS -->
+    <link rel="stylesheet" href="css/valentine.css" />
+    <link rel="stylesheet" href="css/lastpage.css" />
+
+    <style>
+      /* Sembunyikan halaman thank you dulu */
+      #thankYouPage {
+        display: none;
+        text-align: center;
+      }
+
+      #valentinePage {
+        text-align: center;
+      }
+
+      /* ===== MOBILE RESPONSIVE FIX ===== */
+      @media (max-width: 768px) {
+        /* Global */
+        body {
+          overflow-x: hidden;
+        }
+
+        /* Start card */
+        .start-card {
+          padding: 1.5rem !important;
+          margin: 0 10px;
+        }
+
+        h1 {
+          font-size: 2.2rem !important;
+        }
+
+        /* Instruction text */
+        #instruction-text {
+          font-size: 2rem !important;
+        }
+
+        #sub-instruction {
+          font-size: 1rem !important;
+          letter-spacing: 0.1em;
+        }
+
+        /* Banner */
+        .banner-text {
+          font-size: 2.5rem !important;
+        }
+
+        /* Blow meter */
+        #blow-meter-container {
+          width: 80%;
+          bottom: 12%;
+        }
+
+        #blow-hint {
+          bottom: 15%;
+          font-size: 12px;
+          padding: 0 10px;
+        }
+
+        /* Card (flip card) */
+        #flip-card-container {
+          max-width: 90% !important;
+          aspect-ratio: 3 / 4;
+        }
+
+        /* Card text */
+        #typewriter-text-1,
+        #typewriter-text-2 {
+          font-size: 13px !important;
+          line-height: 1.5;
+        }
+
+        /* Buttons */
+        button {
+          font-size: 14px !important;
+          padding: 10px 16px !important;
+        }
+
+        /* Floating gift */
+        #floating-gift-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 22px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        /* Valentine button */
+        #go-valentine-btn {
+          width: 85%;
+          font-size: 16px;
+          padding: 12px;
+        }
+
+        /* Camera preview kecilin */
+        #cam-preview-container {
+          transform: scale(0.8);
+          transform-origin: bottom left;
+        }
+      }
+
+      @media (max-width: 480px) {
+        button {
+          min-height: 44px; /* standar touch */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HALAMAN PERTAMA -->
+    <audio id="bgm" loop autoplay>
+      <source src="./src/happy-birthday-155461.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="valentinePage">
+      <div id="valentineQuestion">
+        <b>maukah kamu dinner denganku besok malam?</b>
+      </div>
+
+      <button class="answerButton" id="yesButton">MAAAUUUUUUUUU</button>
+
+      <button class="answerButton" id="noButton">trda</button>
+
+      <br />
+      <img src="./src/cat.gif" alt="cat asking question" class="responsive" />
+    </div>
+
+    <!-- HALAMAN THANK YOU -->
+    <div id="thankYouPage">
+      <div id="thankyou"><b>Makasi Princess Becca</b></div>
+
+      <img
+        id="rizz"
+        src="./src/rizz.gif"
+        alt="rizzler god"
+        class="responsive"
+      />
+      <br />
+
+      <audio controls autoplay loop>
+        <source src="./src/congratulations.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script>
+      const yesButton = document.getElementById("yesButton");
+      const noButton = document.getElementById("noButton");
+
+      // Saat klik "Mauuuu"
+      yesButton.addEventListener("click", function () {
+        document.getElementById("valentinePage").style.display = "none";
+        document.getElementById("thankYouPage").style.display = "block";
+      });
+
+      // Saat klik "trada"
+      noButton.addEventListener("click", function () {
+        let currentFontSize = parseInt(
+          window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = currentFontSize + 10 + "px";
+      });
+    </script>
+  </body>
+</html>

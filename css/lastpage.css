@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at center, #1a0b1a 0%, #000000 100%);
+  font-family: "Noto Serif SC", serif;
+  color: white;
+}
+
+#thankYouPage {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 105, 180, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.2);
+}
+
+#thankyou {
+  font-size: 50px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #a18cd1);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+img {
+  max-width: 220px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
